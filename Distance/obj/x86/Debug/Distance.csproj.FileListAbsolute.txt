@@ -4,3 +4,9 @@
 /Users/mtok0410/git/Distance/Distance/obj/x86/Debug/Distance.csproj.CoreCompileInputs.cache
 /Users/mtok0410/git/Distance/Distance/obj/x86/Debug/Distance.exe
 /Users/mtok0410/git/Distance/Distance/obj/x86/Debug/Distance.pdb
+/Users/mtok0410/git/Distance/Distance/bin/Debug/Newtonsoft.Json.dll
+/Users/mtok0410/git/Distance/Distance/bin/Debug/Newtonsoft.Json.xml
+/Users/mtok0410/git/Distance/Distance/bin/Debug/System.Xml.ReaderWriter.dll
+/Users/mtok0410/git/Distance/Distance/bin/Debug/Echovoice.JSON.dll
+/Users/mtok0410/git/Distance/Distance/bin/Debug/Echovoice.JSON.pdb
+/Users/mtok0410/git/Distance/Distance/bin/Debug/Echovoice.JSON.xml

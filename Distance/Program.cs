@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Net;
 using System.IO;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System.Xml;
+using Echovoice.JSON;
 
 namespace Distance
 {
@@ -8,18 +12,32 @@ namespace Distance
     {
         public static void Main(string[] args)
         {
-            // Create a request using a URL that can receive a post.   
-            WebRequest request = WebRequest.Create("http://127.0.0.1:5000/ ");
-            // Set the Method property of the request to POST.  
-            request.Method = "POST";
+            string API_KEY = "AIzaSyBUx_zft_23-u1J3LTa8d2CIzzuHYOwVy8";
+            string country = "DE";
+            string PLZ = "74172";
+
+            string url = @"https://maps.googleapis.com/maps/api/geocode/json?components=postal_code:" + PLZ + "|country:" + country + "&key=" + API_KEY;
+
+            WebRequest request = WebRequest.Create(url);
 
             WebResponse response = request.GetResponse();
 
             Stream data = response.GetResponseStream();
-            StreamReader reader = new StreamReader(data);
-            string responseFromServer = reader.ReadToEnd();
 
-            Console.WriteLine(responseFromServer);
+            StreamReader reader = new StreamReader(data);
+
+            string unParsed = reader.ReadToEnd();
+
+            response.Close();
+
+            JObject rss = JObject.Parse(unParsed);
+
+            var token = (JArray)rss.SelectToken("lat");
+
+            foreach (var item in token)
+            {
+                Console.WriteLine(item.ToString());
+            }
         }
     }
 }
