@@ -1,0 +1,6 @@
+/Users/mtok0410/git/Distance/Distance/bin/Debug/Distance.exe
+/Users/mtok0410/git/Distance/Distance/bin/Debug/Distance.pdb
+/Users/mtok0410/git/Distance/Distance/obj/x86/Debug/Distance.csprojResolveAssemblyReference.cache
+/Users/mtok0410/git/Distance/Distance/obj/x86/Debug/Distance.csproj.CoreCompileInputs.cache
+/Users/mtok0410/git/Distance/Distance/obj/x86/Debug/Distance.exe
+/Users/mtok0410/git/Distance/Distance/obj/x86/Debug/Distance.pdb
