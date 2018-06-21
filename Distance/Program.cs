@@ -30,14 +30,16 @@ namespace Distance
 
             response.Close();
 
-            JObject rss = JObject.Parse(unParsed);
 
-            var token = (JArray)rss.SelectToken("lat");
 
-            foreach (var item in token)
-            {
-                Console.WriteLine(item.ToString());
-            }
+            Console.WriteLine(unParsed);
+
+            JObject jObject = JObject.Parse(unParsed);
+            //string displayName = (string)jObject("results.formatted_address");
+
+            Console.WriteLine("---------------------------------------");
+
+            Console.WriteLine(jObject["results"][0]["geometry"]["location"]);
         }
     }
 }
