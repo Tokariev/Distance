@@ -30,16 +30,13 @@ namespace Distance
 
             response.Close();
 
-
-
-            Console.WriteLine(unParsed);
-
             JObject jObject = JObject.Parse(unParsed);
-            //string displayName = (string)jObject("results.formatted_address");
 
-            Console.WriteLine("---------------------------------------");
 
-            Console.WriteLine(jObject["results"][0]["geometry"]["location"]);
+            string lat = (string)jObject["results"][0]["geometry"]["location"]["lat"];
+            string lng = (string)jObject["results"][0]["geometry"]["location"]["lng"];
+
+            Console.WriteLine("lat : {0},\nlng: {1}", lat, lng);
         }
     }
 }
